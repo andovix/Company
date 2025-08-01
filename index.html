@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Manajemen Keuangan</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:600,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-pattern"></div>
+    <div class="login-container">
+        <h2>LOGIN</h2>
+        <form id="loginForm" autocomplete="off">
+            <div class="input-box">
+                <input type="text" id="username" placeholder="Username" required>
+            </div>
+            <div class="input-box">
+                <input type="password" id="password" placeholder="Password" required>
+                <span class="toggle-password" onclick="togglePassword()">
+                    <svg width="22" height="22" fill="#fff" viewBox="0 0 24 24"><path d="M12 5c-7 0-10 7-10 7s3 7 10 7 10-7 10-7-3-7-10-7zm0 12c-2.8 0-5.1-2.3-5.1-5.1S9.2 6.9 12 6.9s5.1 2.3 5.1 5.1S14.8 17 12 17zm0-8.2a3.1 3.1 0 1 0 0 6.2 3.1 3.1 0 0 0 0-6.2z"/></svg>
+                </span>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+            <div id="loginError" style="color: #f3b313; margin-top:10px; display:none;">Username atau Password salah.</div>
+        </form>
+    </div>
+    <script>
+    function togglePassword() {
+        const pass = document.getElementById('password');
+        pass.type = pass.type === 'password' ? 'text' : 'password';
+    }
+    </script>
+</body>
+</html>
