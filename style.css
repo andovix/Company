@@ -1,6 +1,5 @@
 body {
   min-height: 100vh;
-  min-width: 100vw;
   margin: 0;
   padding: 0;
   background: #000;
@@ -8,38 +7,76 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .login-container {
   background: #232323;
   border: 3px solid;
   border-image: linear-gradient(90deg, #FFD700, #FFB800, #FF8C00) 1;
   border-radius: 20px;
-  padding: 32px;
+  padding: 32px 24px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
   min-width: 320px;
-  max-width: 90vw;
+  max-width: 95vw;
+  width: 100%;
 }
-.login-container input, .login-container button {
+
+.login-title {
+  text-align: center;
+  color: #fff;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-container input {
   border-radius: 8px;
   border: 2px solid #FFD700;
-  padding: 10px;
+  padding: 10px 14px;
   font-size: 16px;
-  margin-bottom: 8px;
+  background: #232323;
+  color: #fff;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
 }
+
+.login-container input::placeholder {
+  color: #b3b3b3;
+}
+
 .login-container button {
+  border-radius: 8px;
   background: linear-gradient(90deg, #FFD700 0%, #FFB800 100%);
   color: #232323;
   font-weight: bold;
   border: none;
+  padding: 10px 14px;
+  font-size: 16px;
   margin-top: 8px;
   cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background 0.2s;
 }
+
+.login-container button:hover {
+  background: linear-gradient(90deg, #FFB800 0%, #FFD700 100%);
+}
+
 @media (max-width: 500px) {
   .login-container {
     min-width: unset;
-    width: 95vw;
-    padding: 16px;
+    width: 98vw;
+    padding: 16px 8px;
   }
 }
