@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Manajemen Keuangan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="menu active" onclick="showTab('pemasukan')">Pemasukan <span>&gt;</span></div>
+        <div class="menu" onclick="showTab('pengeluaran')">Pengeluaran</div>
+        <div class="menu" onclick="showTab('pengelolaan')">Pengelolaan</div>
+        <div class="menu" onclick="logout()" style="margin-top:60px; background:#f3b313; color:#222;">Logout</div>
+    </div>
+    <div class="main-content">
+        <div class="bg-pattern"></div>
+        <div class="dashboard-header">
+            <div class="stat-box">
+                <div class="stat-title">Total pemasukan :</div>
+                <div class="stat-value" id="totalPemasukan">Rp. 0</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-title">Total pengeluaran :</div>
+                <div class="stat-value" id="totalPengeluaran">Rp. 0</div>
+            </div>
+        </div>
+        <!-- Tab Pemasukan -->
+        <div id="pemasukan-tab">
+            <h3>Input pemasukan</h3>
+            <form id="formPemasukan" class="input-form">
+                <input type="date" id="tglPemasukan" required>
+                <input type="number" id="jumlahTelor" placeholder="Jumlah telor (kg)" required>
+                <input type="number" id="hargaTelor" placeholder="Harga telor (Rp)" required>
+                <button type="submit">Tambah</button>
+            </form>
+            <div class="tab-divider"></div>
+            <h3>Riwayat pemasukan</h3>
+            <div class="history-list" id="listPemasukan"></div>
+        </div>
+        <!-- Tab Pengeluaran -->
+        <div id="pengeluaran-tab" style="display:none;">
+            <h3>Input pengeluaran</h3>
+            <form id="formPengeluaran" class="input-form">
+                <input type="date" id="tglPengeluaran" required>
+                <input type="text" id="jenisPengeluaran" placeholder="Jenis pengeluaran" required>
+                <input type="number" id="nominalPengeluaran" placeholder="Nominal (Rp)" required>
+                <button type="submit">Tambah</button>
+            </form>
+            <div class="tab-divider"></div>
+            <h3>Riwayat pengeluaran</h3>
+            <div class="history-list" id="listPengeluaran"></div>
+        </div>
+        <!-- Tab Pengelolaan -->
+        <div id="pengelolaan-tab" style="display:none;">
+            <h3>Pengelolaan / bulan</h3>
+            <div class="tab-divider"></div>
+            <div id="rekapPengelolaan"></div>
+        </div>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>
