@@ -14,7 +14,7 @@ body {
     right: 0;
     width: 70vw;
     height: 100vh;
-    background: url('img/batik.png') repeat;
+    background: linear-gradient(90deg, #FFD700 0%, #FFB800 50%, #FF8C00 100%);
     opacity: 0.42;
     z-index: 1;
     pointer-events: none;
