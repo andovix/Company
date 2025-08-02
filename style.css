@@ -11,10 +11,10 @@ body {
 
 .login-container {
   background: #232323;
-  border: 5px solid;
+  border: 3px solid;
   border-image: linear-gradient(90deg, #FFD700, #FFA500) 1;
   border-image-slice: 1;
-  border-radius: 16px;
+  border-radius: 32px;
   padding: 28px 20px;
   box-sizing: border-box;
   display: flex;
