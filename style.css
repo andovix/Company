@@ -1,7 +1,7 @@
 body {
   min-height: 100vh;
-  margin: 10;
-  padding: 10;
+  margin: 0;
+  padding: 0;
   background: #000;
   border: 3px solid;
   display: flex;
@@ -14,7 +14,7 @@ body {
   border: 5px solid;
   border-image: linear-gradient(90deg, #FFD700, #FFA500) 1;
   border-image-slice: 1;
-  border-radius: 32px;
+  border-radius: 16px;
   padding: 28px 20px;
   box-sizing: border-box;
   display: flex;
