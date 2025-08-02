@@ -41,14 +41,17 @@ body {
   gap: 12px;
 }
 
-.login-container input {
+.login-container input, .login-container button{
   border-radius: 18px;
-  border: 2px solid (90deg, #FFD700, #FFA500) 1;
-  padding: 12px 16px;
-  font-size: 18px;
+  border: 2px;
+  border-image: linear-gradient(90deg, #FFD700, #FFA500) 1;
+  padding: 10px 14px;
+  font-size: 1,1rem;
   background: #232323;
   color: #fff;
   box-sizing: border-box;
+  margin-bottom: 8px;
+  width: 100%;
 }
 
 .login-container input::placeholder {
