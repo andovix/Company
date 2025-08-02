@@ -14,6 +14,7 @@ body {
   border: 3px solid;
   border-image: linear-gradient(90deg, #FFD700, #FFA500) 1;
   border-image-slice: 1;
+  border-image-repeat: round;
   border-radius: 32px;
   padding: 28px 20px;
   box-sizing: border-box;
@@ -23,7 +24,7 @@ body {
   min-width: 300px;
   max-width: 370px;
   margin: auto;
-  width: 90vw;
+  width: 70vw;
 }
 
 .login-title {
