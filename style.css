@@ -11,10 +11,7 @@ body {
 
 .login-container {
   background: #232323;
-  border: 3px solid;
-  border-image: linear-gradient(90deg, #FFD700, #FFA500) 1;
-  border-image-slice: 1;
-  border-image-repeat: round;
+  border: 3px solid #FFD700;
   border-radius: 32px;
   padding: 28px 20px;
   box-sizing: border-box;
