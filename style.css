@@ -26,11 +26,12 @@ body {
 
 .login-title {
   text-align: center;
+  font-family: inherit;
   color: #fff;
-  letter-spacing: 2px;
-  margin-bottom: 12px;
-  font-size: 1.3rem;
-  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  font-weight: 400;
 }
 
 .input-group {
