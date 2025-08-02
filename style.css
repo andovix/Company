@@ -64,13 +64,11 @@ body {
   font-weight: 600;
   border: none;
   padding: 10px 0px;
-  font-size: 16px;
+  font-size: 1,1rem;
   border-radius: 18px;
   margin-top: 8px;
   cursor: pointer;
   width: 100%;
-  box-sizing: border-box;
-  transition: background 0.2s;
 }
 
 .login-container button:hover {
@@ -79,9 +77,9 @@ body {
 
 @media (max-width: 500px) {
   .login-container {
-    max-width: 94vw;
+    max-width: 95vw;
     min-width: unset;
-    padding: 22px 8px;
-    margin: 40px auto;
+    padding: 16px 5px;
+    margin: 48px auto;
   }
 }
