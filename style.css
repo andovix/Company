@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background: #000;
-  border: 3px solid;
+  border: 2px solid;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,7 +11,7 @@ body {
 
 .login-container {
   background: #232323;
-  border: 3px solid #FFD700;
+  border: 2px solid #FFA500;
   border-radius: 32px;
   padding: 28px 20px;
   box-sizing: border-box;
@@ -41,7 +41,7 @@ body {
 }
 
 .login-container input, .login-container button{
-  border-radius: 18px;
+  border-radius: 8px;
   border: 2px;
   border-image: linear-gradient(90deg, #FFD700, #FFA500) 1;
   padding: 10px 14px;
@@ -50,7 +50,7 @@ body {
   color: #fff;
   box-sizing: border-box;
   margin-bottom: 8px;
-  width: 100%;
+  width: 70%;
 }
 
 .login-container input::placeholder {
