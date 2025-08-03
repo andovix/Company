@@ -13,7 +13,7 @@ body {
 
 .sidebar {
   width: 180px;
-  background-color: linear-gradient(135deg, #FFD700, #FFA500);
+  background: linear-gradient(135deg, #FFD700, #FFA500);
   color: #fff;
   padding: 20px;
   border-right: 2px solid gold;
