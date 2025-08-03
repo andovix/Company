@@ -40,7 +40,7 @@ body {
   gap: 12px;
 }
 
-.login-container input, .login-container button{
+.login-container input {
   border-radius: 6px;
   border: 2px solid #FFA500;
   border-image: linear-gradient(90deg, #FFD700, #FFA500) 1;
@@ -50,7 +50,7 @@ body {
   color: #fff;
   box-sizing: border-box;
   margin-bottom: 8px;
-  width: 70%;
+  width: 100%;
 }
 
 .login-container input::placeholder {
