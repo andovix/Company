@@ -13,9 +13,10 @@ body {
 
 .sidebar {
   width: 180px;
-  background: linear-gradient(135deg, #FFD700, #FFA500);
+  background: linear-gradient(135deg, #FFA500 0%, #FFC107 40%, #FFD700 100%);
   color: #000;
   padding: 20px;
+  padding-right: 0px;
   border-right: 2px solid gold;
 }
 
@@ -26,22 +27,27 @@ body {
 }
 
 .sidebar li {
- padding: 10px 14px;
+  display: flex;
+  justify-content: flex-end; /* teks ke kanan */
+  align-items: center;
+  padding: 10px 14px;
   cursor: pointer;
-  border: none;
   margin-bottom: 8px;
   background: transparent;
   color: #000;
   font-weight: 500;
   border-radius: 6px;
-  transition: all 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .sidebar li.active {
   border: 2px solid #000;
   font-weight: bold;
   background-color: transparent;
-  color: #000;
+  color: #fff;
+  justify-content: flex-end;
+  text-align: right;
 }
 
 .main-content {
