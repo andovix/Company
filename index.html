@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="login-container">
-    <div class="login-title">LOGIN</div>
-    <div class="input-group">
-      <input type="text" placeholder="Username" />
-      <input type="password" placeholder="Password" />
-    </div>
-    <button>Login</button>
+    <h2 class="login-title">LOGIN</h2>
+    <form action="dashboard.html" method="GET" class="input-group">
+      <input type="text" placeholder="Username" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
   </div>
 </body>
 </html>
