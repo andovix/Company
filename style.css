@@ -41,8 +41,8 @@ body {
 }
 
 .login-container input, .login-container button{
-  border-radius: 8px;
-  border: 2px;
+  border-radius: 6px;
+  border: 2px solid #FFA500;
   border-image: linear-gradient(90deg, #FFD700, #FFA500) 1;
   padding: 10px 14px;
   font-size: 1,1rem;
@@ -67,7 +67,7 @@ body {
   border-radius: 18px;
   margin-top: 8px;
   cursor: pointer;
-  width: 100%;
+  width: 70%;
 }
 
 .login-container button:hover {
