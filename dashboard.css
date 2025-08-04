@@ -9,6 +9,7 @@ body {
 .dashboard-container {
   display: flex;
   min-width: 100vw;
+  width: max-content;
 }
 
 .sidebar {
