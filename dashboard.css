@@ -22,12 +22,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .sidebar ul {
   list-style: none;
-  padding: 10px 0 10px 20px
+  padding: 10px 0 10px 20px;
   margin: 0;
 }
 
