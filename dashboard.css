@@ -27,15 +27,17 @@ body {
 
 .sidebar ul {
   list-style: none;
-  padding: 10px 0 10px 20px;
+  width: 100%;
+  padding: 0;
   margin: 0;
 }
 
 .sidebar li {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 10px 16px 10px 10px;
+  padding-left: 0;
+  padding-right: 0;
   margin-bottom: 10px;
   color: #fff;
   font-weight: 500;
