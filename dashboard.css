@@ -49,20 +49,21 @@ body {
   background-color: #000;
   color: #fff;
   font-weight: bold;
-  border-radius: 8px 0 0 8px;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 0 8px 20px;
+  padding: 6px 0 6px 20px;
   padding-left: 20px;
   padding-right: 10px;
   border: 2px solid #000;
 }
 
 .sidebar li.active .arrow {
-  position: absolute;
   right: 8px;
   color: #fff;
+  margin-left: auto;
   font-size: 18px;
 }
 
