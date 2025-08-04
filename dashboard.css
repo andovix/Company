@@ -125,3 +125,10 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
+.sidebar li[data-key="pengeluaran"],
+.sidebar li[data-key="pengelolaan"] {
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+}
