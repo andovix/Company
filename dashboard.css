@@ -14,9 +14,10 @@ body {
 
 .sidebar {
   width: 180px;
+  height: 900px;
   background: linear-gradient(135deg, #FF8C00, #FFA500, #FFD700);
   color: #fff;
-  padding: 20px 0;
+  padding: 0;
   padding-right: 0;
   box-sizing: border-box;
   display: flex;
