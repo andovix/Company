@@ -2,158 +2,78 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8"/>
-  <title>Desktop Pemasukan</title>
+  <title>Dashboard Interaktif</title>
   <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:Inter,-apple-system,system-ui}
-    body{display:flex;height:100vh;width:1440px;margin:0 auto;background:#f2f2f2}
+    html,body{margin:0;padding:0;height:900px;width:1440px;overflow:hidden;font-family:Arial,Helvetica,sans-serif}
+    .wrapper{
+      position:relative;
+      width:1440px;
+      height:900px;
+      background:url('assets/bg-clean.png') no-repeat top left/contain;
+      color:#fff;
+    }
 
-    /* SIDEBAR 360px kiri */
-    .sidebar{
-      width:360px;
-      height: 900px;
-      background:linear-gradient(180deg,#FFD54F 0%,#F9A825 100%);
+    /* --- Overlay input --- */
+    .overlay{
+      position:absolute;
+      top:190px;   /* koordinat PNG */
+      left:540px;
+      width:260px;
       display:flex;
       flex-direction:column;
-      justify-content: center;
-      align-items:center;
-      padding-top:0;
+      gap:8px;
     }
-    .main-content {
-      width: 1260px;
-      height: 900px;
-      background-color: #000;
-      padding: 20px;
-      box-sizing: border-box;
-      overflow-y: auto;
-    }
-    .sidebar a{
-      width:100%;
-      text-align:center;
-      padding:20px 0;
-      color:#111;
-      font-size:18px;
-      font-weight:600;
-      text-decoration:none;
-      position:relative;
-    }
-    /* Pemasukan aktif */
-    .sidebar .active{
+    .overlay input{
+      padding:6px 10px;
+      border:2px solid #FFA500;
+      border-radius:6px;
       background:#111;
-      color:#FFD54F;
-      border-top-left-radius:24px;
-      border-bottom-left-radius:24px;
-      margin-right:-1px; /* menempel ke kanan */
+      color:#fff;
     }
-
-    /* KONTEN 1080px kanan */
-    .content{
-      flex:1;
-      padding:40px 60px;
-      background:#ffffff;
-      overflow-y:auto;
-    }
-    .top-cards{display:flex;gap:32px;margin-bottom:40px}
-    .top-card{
-      flex:1;
-      border:1px solid #e0e0e0;
-      border-radius:8px;
-      padding:20px 24px;
-      box-shadow:0 2px 8px rgba(0,0,0,.05);
-    }
-    .top-card h3{font-size:14px;color:#555;margin-bottom:4px}
-    .top-card p{font-size:28px;font-weight:700}
-
-    .section-title{
-      font-size:22px;
-      font-weight:700;
-      margin-bottom:12px;
-      border-bottom:2px solid #FFD54F;
-      display:inline-block;
-      padding-bottom:4px;
-    }
-
-    /* Form edit emas */
-    .form-edit{
-      border:1px solid #FFD54F;
-      border-radius:8px;
-      padding:24px;
-      margin-bottom:24px;
-      display:flex;
-      gap:16px;
-      align-items:flex-end;
-    }
-    .form-edit label{display:block;font-size:14px;margin-bottom:4px}
-    .form-edit input{
-      height:40px;
-      padding:0 12px;
-      border:1px solid #FFD54F;
-      border-radius:4px;
-    }
-    .btn-send{
-      height:40px;
-      padding:0 32px;
-      background:#FFD54F;
+    .overlay button{
+      padding:8px 0;
+      background:#FFA500;
       border:none;
-      border-radius:4px;
+      border-radius:6px;
       font-weight:700;
       cursor:pointer;
     }
 
-    /* Hasil */
+    /* --- Hasil real-time --- */
     .result{
-      border:1px solid #e0e0e0;
-      border-radius:8px;
-      padding:20px 24px;
-      font-size:16px;
+      position:absolute;
+      top:300px;
+      left:540px;
+      width:260px;
+      padding:8px 10px;
+      background:rgba(0,0,0,.75);
+      border-radius:6px;
+      text-align:center;
     }
   </style>
 </head>
 
 <body>
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <a href="#" class="active">Pemasukan</a>
-    <a href="#">Pengeluaran</a>
-    <a href="#">Pengelolaan</a>
-  </aside>
-
-  <!-- Konten -->
-  <main class="content">
-    <!-- Top cards -->
-    <div class="top-cards">
-      <div class="top-card">
-        <h3>Total pemasukan :</h3>
-        <p>Rp.30.000.000</p>
-      </div>
-      <div class="top-card">
-        <h3>Total pengeluaran :</h3>
-        <p>Rp. 12.000.000</p>
-      </div>
-    </div>
-
-    <h2 class="section-title">Riwayat pemasukan</h2>
-
-    <!-- Form edit -->
-    <form class="form-edit">
-      <div>
-        <label>Tanggal</label>
-        <input type="date" value="2025-12-26" />
-      </div>
-      <div>
-        <label>Harga telor (Rp)</label>
-        <input type="number" value="26000" />
-      </div>
-      <div>
-        <label>Jumlah telor (kg)</label>
-        <input type="number" value="25" />
-      </div>
-      <button class="btn-send" type="button">SEND</button>
+  <div class="wrapper">
+    <form class="overlay" onsubmit="return false;">
+      <input id="harga" type="number" placeholder="Harga telor (Rp)" value="26000"/>
+      <input id="jumlah" type="number" placeholder="Jumlah telor (kg)" value="25"/>
+      <button onclick="update()">SEND</button>
     </form>
 
-    <!-- Hasil -->
-    <div class="result">
-      26 Des 2025&nbsp;&nbsp;|&nbsp;&nbsp;Harga telor&nbsp;&nbsp;|&nbsp;&nbsp;<strong>Rp, 26.000</strong>
+    <div id="hasil" class="result">
+      26 Des 2025 | Harga telor | Rp, 26.000
     </div>
-  </main>
+  </div>
+
+  <script>
+    function update() {
+      const h = Number(document.getElementById('harga').value);
+      const j = Number(document.getElementById('jumlah').value);
+      const total = h * j;
+      document.getElementById('hasil').innerText =
+        `26 Des 2025 | Harga telor | Rp, ${total.toLocaleString('id')}`;
+    }
+  </script>
 </body>
 </html>
