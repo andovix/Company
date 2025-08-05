@@ -1,56 +1,65 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard Telor</title>
-  <link rel="stylesheet" href="dashboard.css">
+  <meta charset="UTF-8" />
+  <title>Dasbor Keuangan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <div class="dashboard-container">
-    <div class="sidebar">
-      <ul>
-        <li class="active">
-          <span class="menu-text">Pemasukan</span>
-          <span class="arrow">&gt;</span>
-        </li>
-        <li><span class="menu-text">Pengeluaran</span></li>
-        <li><span class="menu-text">Pengelolaan</span></li>
-      </ul>
+
+<body class="bg-slate-100 text-slate-800 font-sans">
+  <!-- Header -->
+  <header class="bg-white shadow px-4 py-3 flex justify-between items-center">
+    <h1 class="text-lg font-bold">Dasbor Keuangan</h1>
+    <div class="w-8 h-8 bg-slate-300 rounded-full"></div>
+  </header>
+
+  <!-- Ringkasan -->
+  <section class="px-4 py-4 grid grid-cols-2 gap-3 text-sm">
+    <div class="bg-white rounded-md shadow p-3">
+      <p class="text-xs text-slate-500">Total pemasukan :</p>
+      <p class="text-xl font-bold text-green-600">Rp30.000.000</p>
+    </div>
+    <div class="bg-white rounded-md shadow p-3">
+      <p class="text-xs text-slate-500">Total pengeluaran :</p>
+      <p class="text-xl font-bold text-red-600">Rp12.000.000</p>
+    </div>
+  </section>
+
+  <!-- Tab -->
+  <nav class="px-4 mb-3">
+    <div class="border-b border-slate-200 flex space-x-6 text-sm">
+      <span class="border-b-2 border-green-600 pb-1 font-semibold">Riwayat pemasukan</span>
+      <span class="pb-1 text-slate-400">Pengeluaran</span>
+    </div>
+  </nav>
+
+  <!-- Daftar -->
+  <main class="px-4 space-y-3 text-sm">
+
+    <!-- Pemasukan -->
+    <div class="bg-white rounded-md shadow p-3">
+      <p class="text-xs text-slate-400">26, des, 25</p>
+      <p class="font-semibold mt-1">Harga telor</p>
+      <p class="text-green-600 font-bold">Rp26.000</p>
     </div>
 
-    <div class="main-content">
-      <div class="top-summary">
-        <div class="summary-box">
-          <small>Total pemasukan :</small>
-          <h2>Rp. 30.000.000</h2>
-        </div>
-        <div class="summary-box">
-          <small>Total pengeluaran :</small>
-          <h2>Rp. 12.000.000</h2>
-        </div>
-      </div>
-
-      <h2 class="section-title">Riwayat pemasukan</h2>
-      <div class="income-list">
-        <div class="income-card">
-          <div>
-            <strong>Jumat, 25 Juli 2025</strong><br>
-            Jumlah telor : 25kg<br>
-            Harga telor : Rp. 26.000
-          </div>
-          <div><strong>Rp. 650.000</strong></div>
-        </div>
-        <div class="income-card">
-          <div>
-            <strong>Sabtu, 26 Juli 2025</strong><br>
-            Jumlah telor : 25kg<br>
-            Harga telor : Rp. 26.000
-          </div>
-          <div><strong>Rp. 650.000</strong></div>
-        </div>
-      </div>
+    <!-- Pengeluaran -->
+    <div class="bg-white rounded-md shadow p-3">
+      <p class="text-xs text-slate-400">Sabtu, 26 Juli 2025</p>
+      <p class="mt-1">Jumlah telor : <span class="font-semibold">25 kg</span></p>
+      <p>Harga telor : <span class="font-semibold">Rp26.000</span></p>
+      <p class="font-bold text-red-600">Rp650.000</p>
     </div>
-  </div>
+
+    <!-- Pengelolaan -->
+    <div class="bg-white rounded-md shadow p-3">
+      <p class="text-xs text-slate-400">Sabtu, 26 Juli 2025</p>
+      <p class="mt-1">Jumlah telor : <span class="font-semibold">25 kg</span></p>
+      <p>Harga telor : <span class="font-semibold">Rp26.000</span></p>
+      <p class="font-bold text-red-600">Rp650.000</p>
+    </div>
+
+  </main>
 </body>
 </html>
