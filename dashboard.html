@@ -1,79 +1,15 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8"/>
-  <title>Dashboard Interaktif</title>
-  <style>
-    html,body{margin:0;padding:0;height:900px;width:1440px;overflow:hidden;font-family:Arial,Helvetica,sans-serif}
-    .wrapper{
-      position:relative;
-      width:1440px;
-      height:900px;
-      background:url('assets/bg-clean.png') no-repeat top left/contain;
-      color:#fff;
-    }
-
-    /* --- Overlay input --- */
-    .overlay{
-      position:absolute;
-      top:190px;   /* koordinat PNG */
-      left:540px;
-      width:260px;
-      display:flex;
-      flex-direction:column;
-      gap:8px;
-    }
-    .overlay input{
-      padding:6px 10px;
-      border:2px solid #FFA500;
-      border-radius:6px;
-      background:#111;
-      color:#fff;
-    }
-    .overlay button{
-      padding:8px 0;
-      background:#FFA500;
-      border:none;
-      border-radius:6px;
-      font-weight:700;
-      cursor:pointer;
-    }
-
-    /* --- Hasil real-time --- */
-    .result{
-      position:absolute;
-      top:300px;
-      left:540px;
-      width:260px;
-      padding:8px 10px;
-      background:rgba(0,0,0,.75);
-      border-radius:6px;
-      text-align:center;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halaman Awal</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <div class="wrapper">
-    <form class="overlay" onsubmit="return false;">
-      <input id="harga" type="number" placeholder="Harga telor (Rp)" value="26000"/>
-      <input id="jumlah" type="number" placeholder="Jumlah telor (kg)" value="25"/>
-      <button onclick="update()">SEND</button>
-    </form>
-
-    <div id="hasil" class="result">
-      26 Des 2025 | Harga telor | Rp, 26.000
-    </div>
+  <div class="container">
+    <div class="sidebar"></div>
+    <div class="main"></div>
   </div>
-
-  <script>
-    function update() {
-      const h = Number(document.getElementById('harga').value);
-      const j = Number(document.getElementById('jumlah').value);
-      const total = h * j;
-      document.getElementById('hasil').innerText =
-        `26 Des 2025 | Harga telor | Rp, ${total.toLocaleString('id')}`;
-    }
-  </script>
 </body>
 </html>
