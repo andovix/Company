@@ -1,26 +1,29 @@
-/* Atur body dan kontainer utama */
-body, html {
+/* Pastikan tidak ada margin/padding default */
+* {
   margin: 0;
   padding: 0;
-  height: 100%;
-  background-color: #000; /* Latar belakang utama hitam */
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100vh;
+  background-color: #000;
   font-family: Arial, sans-serif;
 }
 
 .container {
   display: flex;
-  width: 100vw;
-  height: 100vh;
+  height: 100%;
 }
 
 /* Sidebar gradasi emas */
 .sidebar {
   width: 200px;
-  background: linear-gradient(to bottom, #FFD700, #FFA500, #FF8C00); /* gradasi emas */
+  background: linear-gradient(135deg, #FF8C00, #FFA500, #FFD700);
 }
 
-/* Area utama kosong untuk sementara */
+/* Bagian utama dengan latar hitam penuh */
 .main {
   flex: 1;
-  background-color: #000; /* hitam juga */
+  background-color: #000;
 }
